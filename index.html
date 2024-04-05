@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteFourCobbleCraft</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f5ff; /* Light blue background */
+            color: #333; /* Dark text color */
+        }
+        header {
+            background-color: #8a2be2; /* Purple header */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #8a2be2; /* Purple footer */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            background-color: #ff69b4; /* Pink button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493; /* Lighter pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EliteFourCobbleCraft</h1>
+    </header>
+    <section>
+        <h2>About EliteFourCobbleCraft</h2>
+        <p>Welcome to EliteFourCobbleCraft, a premier Minecraft community where players explore, build, and collaborate in a vibrant virtual environment.</p>
+        <p>Join us at <span id="serverIP">EliteFourCobbleCraft.aternos.me:33039</span>.</p>
+        <button id="copyIP">Copy IP Address</button>
+        <p>To access our server's custom mods, please follow these instructions:</p>
+        <ol>
+            <li>Download the mod package using the button provided below.</li>
+            <li>Ensure you have the latest edition of Forge installed for Minecraft version 1.20.1.</li>
+            <li>Open Minecraft and navigate to the "Mods" section on the main menu.</li>
+            <li>Locate the mods folder within Minecraft and copy its file path.</li>
+            <li>Extract the contents of the downloaded zip file into the mods folder, ensuring to preserve the directory structure.</li>
+            <li>Launch Minecraft, and you will now have access to the installed mods for enhanced gameplay experience.</li>
+        </ol>
+        <a href="https://1drv.ms/u/c/54201560a3fab6ea/EcQg6iV1-m1Msn6XldbCg4IBqU47e-kyT_la1LX8Opa6Hg?e=d3zNBq" download><button>Download Mods</button></a>
+    </section>
+    <footer>
+        <p>&copy; 2024 EliteFourCobbleCraft. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("copyIP").addEventListener("click", function() {
+            var ipText = document.getElementById("serverIP").innerText;
+            navigator.clipboard.writeText(ipText).then(function() {
+                alert("IP Address copied to clipboard: " + ipText);
+            }, function(err) {
+                console.error('Failed to copy: ', err);
+            });
+        });
+    </script>
+</body>
+</html>
